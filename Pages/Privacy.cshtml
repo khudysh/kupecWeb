@@ -1,0 +1,31 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Authorization";
+}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <h1>@ViewData["Title"]</h1>
+            <form class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal">Please enter data to connect</h1>
+                <div class="form-group mt-3">
+                    <label for="exampleFormControlInput1">API</label>
+                    <input type="text" class="form-control mb-3" id="ApiFormInput">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Secret</label>
+                    <input type="text" class="form-control mb-3" id="SecretFormInput">
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-success btn-block" type="submit">Connect</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
