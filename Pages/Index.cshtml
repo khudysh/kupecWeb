@@ -5,8 +5,9 @@
 }
 
 <body>
-
-
+    <div style="display: none">
+    
+</div>
     <div class="container">
         <div class="row">
             <div class="col table-responsive">
@@ -25,17 +26,70 @@
                                 <th scope="col" class="col-1">Number of purch</th>
                                 <th scope="col" class="col-1">Martins coef.</th>
                                 <th scope="col" class="col-1">SL %</th>
-                                <th ></th>
+                                <th></th>
 
                             </tr>
                         </thead>
                     </div>
                     <tbody>
+                        <tr id="row" style="display: none;">
+                            <td class="text-center"><input type="text" size="" value="LTCUSTD"
+                                    class="form-control text-center mt-1" id="pair"></td>
+                            <td class="text-center form-switch"><input class="form-check-input mx-auto butMid"
+                                    type="checkbox" id="onlySell"></td>
+                            <td class="text-center">
+                                <select class="form-control" id="strat">
+                                    <option>market price</option>
+                                    <option>before param</option>
+                                    <option>before MA</option>
+                                </select>
+                            </td>
+                            <td class="text-center">
+                                <select class="form-control text-center" id="TF">
+                                    <option>1m</option>
+                                    <option>3m</option>
+                                    <option>5m</option>
+                                    <option>15m</option>
+                                    <option>30m</option>
+                                    <option>1h</option>
+                                    <option>2h</option>
+                                    <option>4h</option>
+                                    <option>6h</option>
+                                    <option>8h</option>
+                                    <option>12h</option>
+                                    <option>1d</option>
+                                    <option>3d</option>
+                                    <option>1w</option>
+                                    <option>1M</option>
+                                </select>
+                            </td>
+                            <td class="text-center"><input type="text" size="1" value="7"
+                                    class="form-control  text-center " id="param"></td>
+
+                            <td class="text-center"><input type="text" size="1" value="0.7"
+                                    class="form-control text-center " id="take"></td>
+
+                            <td class="text-center"><input type="text" size="1" value="11"
+                                    class="form-control text-center " id="value"></td>
+
+                            <td class="text-center"><input type="text" size="1" value="2.5"
+                                    class="form-control text-center " id="pursh"></td>
+
+                            <td class="text-center"><input type="text" size="1" value="5"
+                                    class="form-control text-center " id="numPursh"></td>
+                            <td class="text-center"><input type="text" size="1" value="1.25"
+                                    class="form-control text-center " id="martin"></td>
+                            <td class="text-center"><input type="text" size="1" value="0"
+                                    class="form-control text-center " id="SL"></td>
+                            <td><button type="button" class="btn-close butMid closeButton" onclick="delRow(this.id)"
+                                    id="close" aria-label="Close"></button></td>
+
+                        </tr>
                         <tr id="row1">
                             <td class="text-center"><input type="text" size="" value="LTCUSTD"
                                     class="form-control text-center mt-1" id="pair1"></td>
-                            <td class="text-center form-switch"><input class="form-check-input mx-auto butMid" type="checkbox"
-                                    id="onlySell1"></td>
+                            <td class="text-center form-switch"><input class="form-check-input mx-auto butMid"
+                                    type="checkbox" id="onlySell1"></td>
                             <td class="text-center">
                                 <select class="form-control" id="strat1">
                                     <option>market price</option>
@@ -80,11 +134,33 @@
                                     class="form-control text-center " id="martin1"></td>
                             <td class="text-center"><input type="text" size="1" value="0"
                                     class="form-control text-center " id="SL1"></td>
-                            <td ><button type="button" class="btn-close butMid closeButton" onclick="delRow(this.id)" id="close1" aria-label="Close"></button></td>
+                            <td><button type="button" class="btn-close butMid closeButton" onclick="delRow(this.id)"
+                                    id="close1" aria-label="Close"></button></td>
 
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- Модальное окно -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Заголовок модального окна</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Закрыть"></button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <button class="btn btn-primary" id="addRow">Add row</button>
             </div>
             <div class="col-2">

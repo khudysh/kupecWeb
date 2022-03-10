@@ -2,25 +2,28 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+
 var counter = 2;
 $("#addRow").click(function() {
 
-    var $row = $('#row1').clone()
+    var $row = $('#row').clone()
     $row.prop('id', 'row' + counter);
-    $row.contents("td").contents("#pair1").prop('value', '');
-    $row.contents("td").contents("#pair1").prop('id', 'pair' + counter);
-    $row.contents("td").contents("#onlySell1").prop('checked', false);
-    $row.contents("td").contents("#onlySell1").prop('id', 'onlySell' + counter);
-    $row.contents("td").contents("#strat1").prop('id', 'strat' + counter);
-    $row.contents("td").contents("#TF1").prop('id', 'TF' + counter);
-    $row.contents("td").contents("#param1").prop('id', 'param' + counter);
-    $row.contents("td").contents("#take1").prop('id', 'take' + counter);
-    $row.contents("td").contents("#value1").prop('id', 'value' + counter);
-    $row.contents("td").contents("#pursh1").prop('id', 'pursh' + counter);
-    $row.contents("td").contents("#numPursh1").prop('id', 'numPursh' + counter);
-    $row.contents("td").contents("#martin1").prop('id', 'martin' + counter);
-    $row.contents("td").contents("#SL1").prop('id', 'SL' + counter);
-    $row.contents("td").contents("#close1").prop('id', 'close' + counter);
+    $row.prop('style', "");
+    $row.contents("td").contents("#pair").prop('value', '');
+    $row.contents("td").contents("#pair").prop('id', 'pair' + counter);
+    $row.contents("td").contents("#onlySell").prop('checked', false);
+    $row.contents("td").contents("#onlySell").prop('id', 'onlySell' + counter);
+    $row.contents("td").contents("#strat").prop('id', 'strat' + counter);
+    $row.contents("td").contents("#TF").prop('id', 'TF' + counter);
+    $row.contents("td").contents("#param").prop('id', 'param' + counter);
+    $row.contents("td").contents("#take").prop('id', 'take' + counter);
+    $row.contents("td").contents("#value").prop('id', 'value' + counter);
+    $row.contents("td").contents("#pursh").prop('id', 'pursh' + counter);
+    $row.contents("td").contents("#numPursh").prop('id', 'numPursh' + counter);
+    $row.contents("td").contents("#martin").prop('id', 'martin' + counter);
+    $row.contents("td").contents("#SL").prop('id', 'SL' + counter);
+    $row.contents("td").contents("#close").prop('id', 'close' + counter);
 
     $("#mainTable").append($row);
     counter++;
