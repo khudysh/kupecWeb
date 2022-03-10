@@ -27,7 +27,9 @@ body {
     max-width: 100%;
     width: 100%;
 }
-
+textarea{
+    resize: none;
+}
 .butMid {
     margin-top: 30%;
 }
